@@ -43,6 +43,12 @@ ul.mainmenu li a:hover {
 
 div.content {
 	margin: 10px;
+	margin-left: 5%;
+}
+
+
+.form-contact {
+margin-left: 5%;
 }
 
 .form-contact label {
@@ -50,11 +56,18 @@ div.content {
 	min-width: 80px;
 }
 .form-contact p {margin: 10px 0 10px 0;}
+.flash {max-width: 415px;}
+
 .form-contact input[type=submit], textarea {
 	font-size: 16px;
 }
 
-.flash {padding: 10px;}
+
+.flash {
+    margin-left: 5%;
+    padding: 10px;
+}
+
 .flash.success {
 	border: 1px solid #21DB56;
 	background: #AEFFC5;
