@@ -15,11 +15,12 @@
 {% block content -%}
     {%- block mainmenu -%}
     <ul class="mainmenu">
-        <li><a href="{{ url_for('index') }}">Главная</a></li>
-        {# для комментариев в jinja2 #}
-        {# была ошибка при переходе от /post/id на /post/add_post из-за некорректного пути {{ m.url }} #}
-        {#используй url_for('add_post') #}
-        <li><a href="{{ url_for('add_post') }}">Добавить статью</a></li>
+
+        {# исправление: в БД вместо add_post нужно /add_post #}
+        {% for p in menu %}
+            <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        {% endfor %}
+
     </ul>
     {% endblock mainmenu -%}
 
